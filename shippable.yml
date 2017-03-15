@@ -3,5 +3,5 @@ language: none
 build:
   ci:
     - echo "running slack service CI"
-    - env
     - ls $JOB_STATE
+    - cat $JOB_STATE/slack-tester.env
