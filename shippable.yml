@@ -1,0 +1,5 @@
+language: none
+
+build:
+  ci:
+    - echo "running slack service CI"
