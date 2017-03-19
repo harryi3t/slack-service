@@ -5,10 +5,6 @@ format() {
   echo "|-$BOLD$1 $2 $NORMAL"
 }
 
-error() {
-  format "$RED" "Failed with error. $1"
-}
-
 check_env() {
   format "$BLUE" "Checking for envs"
 }
@@ -21,6 +17,8 @@ main() {
   format "$YELLOW" "Starting slack-service script"
   check_env
   send_message
+  cat /build/IN/slack-tester/runSh/slack-tester.env
+  sleep 600
 }
 
 main
