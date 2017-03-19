@@ -2,6 +2,7 @@ language: none
 
 build:
   ci:
-    - echo "running slack service CI"
-    - ls "$JOB_STATE"
-    - cat "$JOB_STATE/slack-tester.env"
+    - echo "This project should be used in a pipeline"
+    - echo "The type runSh should be used"
+    - echo "Also it should use another IN runSh job, which would produce the message, a slack token and the slack rooms"
+    - echo "This service will just use that token and send the message to the desired room(s)"
